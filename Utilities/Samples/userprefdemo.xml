@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<Mails>
+		<Mail address="somewhere@intherain.bow" enabled="true" debugOnly="true" />
+		<Mail address="nowhere@intherain.bow" enabled="true" debugOnly="false" />
+	</Mails>
+	<Processus name="myprocess">
+		<Purpose>Demonstrate user pref loading</Purpose>
+		<DemoItems>
+			<DemoItem name="simple demo item">This is a demo item</DemoItem>
+			<DemoItem name="simple demo item too">This is another demo item</DemoItem>
+		</DemoItems>
+	</Processus>
+</Config>

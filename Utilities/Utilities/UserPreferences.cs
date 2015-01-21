@@ -31,15 +31,7 @@ namespace Utilities
 		public bool Load(out string error)
 		{
 			error = "";
-
-			var xio = new XMLIO<T>();
-			var err = "";
-
-			if(!xio.LoadFromFile(GetUserPrefFiles(), out _preferences, out err))
-			{
-				error=err;
-			}
-
+            XMLIO<T>.LoadFromFile(GetUserPrefFiles(), out _preferences, out error);
 			return string.IsNullOrEmpty(error);
 		}
 
@@ -53,15 +45,7 @@ namespace Utilities
 			error = "";
 
 			var filename = this.CreateUserFile();
-
-			var xio = new XMLIO<T>();
-			var err = "";
-
-			if (!xio.SaveToFile(filename,  _preferences, out err, true))
-			{
-				error = err;
-			}
-
+            XMLIO<T>.SaveToFile(filename, _preferences, out error, true);
 			return string.IsNullOrEmpty(error);
 		}
 
@@ -75,7 +59,7 @@ namespace Utilities
 				return file;
 			}
 
-			return  @"\" + _defaultFileName + ".xml";
+			return  _defaultFileName + ".xml";
 
 		}
 
@@ -102,7 +86,7 @@ namespace Utilities
 		/// <summary>
 		/// Create user file, get the complete acces path
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>full filename with path</returns>
 		private string CreateUserFile()
 		{
 			string path = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + '\\' + _appName;
