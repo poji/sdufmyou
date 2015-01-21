@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="Utilities\Utilities.csproj">
+﻿<Properties StartupItem="Samples\Samples.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Utilities\UserPreferences.cs">
     <Files>
